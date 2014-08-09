@@ -6,7 +6,7 @@ NoLeak is an easy-use leak detector for C and C++ programs.
 Building
 ********
 
-The build files are generated using `Bakefile <http://bakefile.org/>`_. Unix users can just run `make`. Visual Studio users will a solution file under `vsproj/<version>/noleak.sln`, replacing `<version>` with your Visual Studio version. For instance, VS 2012 users would open `vsproj/2012/noleak.sln`.
+The build files are generated using `Bakefile <http://bakefile.org/>`_. Unix users can just run `make`. Visual Studio users will find a solution file under `vsproj/<version>/noleak.sln`, replacing `<version>` with your Visual Studio version. For instance, VS 2012 users would open `vsproj/2012/noleak.sln`.
 
 C usage
 *******
