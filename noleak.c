@@ -73,7 +73,7 @@ void* _noleak_add_mem(size_t b, const char* file, const char* func, int lineno)
         }
         strcpy(_noleak_manager->begin->func, func);
     }
-    _noleak_manager->begin->lineno = lineno-1;
+    _noleak_manager->begin->lineno = lineno;
     return _noleak_manager->begin->mem;
 }
 
