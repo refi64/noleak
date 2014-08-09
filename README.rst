@@ -11,7 +11,7 @@ The build files are generated using `Bakefile <http://bakefile.org/>`_. Unix use
 C usage
 *******
 
-Replace calls to `malloc` with `NL_MALLOC`, calls to `free` with `NL_FREE`, and calls to `realloc` with `NL_REALLOC`. Then, call `noleak_init()` at the start of your program's main function and include `noleak.h` at the top of the file. For example, change this:
+Replace calls to `malloc` with `NL_MALLOC`, calls to `free` with `NL_FREE`, calls to `calloc` with `NL_CALLOC`, and calls to `realloc` with `NL_REALLOC`. Then, call `noleak_init()` at the start of your program's main function and include `noleak.h` at the top of the file. For example, change this:
 
 .. code:: c
    

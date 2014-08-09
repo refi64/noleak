@@ -2,6 +2,7 @@
 #define NOLEAK_H
 
 #include <string.h>
+#include <stdlib.h>
 
 #if defined(__cplusplus) || defined(NOLEAK_CPP_OVERRIDE)
 #define _NOLEAK_CPP
@@ -24,6 +25,8 @@ extern "C" {
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+
+static void* _noleak_calloc_tmp = NULL;
 
 struct _noleak_node
 {
@@ -48,6 +51,7 @@ void _noleak_free(void* mem);
 
 #define NL_MALLOC(b) _noleak_add_mem(b, __FILE__, _NOLEAK_FUNC, __LINE__)
 #define NL_REALLOC(p, b) _noleak_realloc(p, b)
+#define NL_CALLOC(n, b) memset(_noleak_calloc_tmp = NL_MALLOC((n)*(b)),0,(n)*(b))
 #define NL_FREE(p) _noleak_free(p)
 
 #ifdef _NOLEAK_CPP
