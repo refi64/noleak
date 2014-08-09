@@ -74,7 +74,7 @@ namespace _noleak
         ~mem_manager() { _noleak_end(); }
     };
 
-    mem_manager mgr;
+    static mem_manager mgr;
 }
 
 #define NOLEAK ::_noleak::pos_info(__FILE__, _NOLEAK_FUNC, __LINE__)
